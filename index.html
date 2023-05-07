@@ -18,7 +18,8 @@
 
     <div data-role="header" data-theme='b'>
         <h1>Game Tracker</h1>
-            
+
+      
         <div data-role="navbar">
             <ul>
                 <li><a href="#about" data-transition="flip">About</a></li>
@@ -36,7 +37,7 @@
     </div>
 
     <div data-role="footer" data-theme="c">
-        <h4>Copyright 2023 Bottle of Whiskey & Container of Water</h4>
+        <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
     </div>
 </div>
 <!--=====================================================-->
@@ -60,7 +61,7 @@
       </div></div>
 
     <div data-role="footer" data-theme="c">
-        <h4>Copyright 2023 Bottle of Whiskey & Container of Water</h4>
+        <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
     </div>
 </div>
  <!--============================================================ -->
@@ -78,12 +79,34 @@
             </div>
         </div>
         <div data-role="content" data-theme="a">
-            <p>Add a game to the Library?<br>
-         </p>
-</div>
+            <p>Add a game to the Library? </p> <br>
+
+<form name = "mainFrom" onsubmit="return false">
+	<fieldset id="gameInfo">
+
+    <label for="title"> Title:</label> 
+    <input name="title" id="title" />
+        <br>
+    <label for="genre">Genre:</label>
+    <input name="genre" id="genre" />
+        <br> 
+     <label for="release">Release Date:</label>
+    <input name="release" id="release" />
+	<br>
+	<label for="trailer">Trailer:</label>
+    <input name="trailer" id="trailer" />
+	<br>
+    <br>
+    <input type="submit" value="Submit" onclick="formSubmitEvent()">
+    
+    </fieldset>
+   
+      <input type="button" value="Click To Add" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
+    </div>
 
         <div data-role="footer" data-theme="c">
-            <h4>Copyright 2023 Bottle of Whiskey & Container of Water</h4>
+            <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
         </div>
     </div>
   </body>
