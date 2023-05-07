@@ -1,17 +1,21 @@
 let gameArr = [];
 
 //Constructor for game object
-let Game = function (pTitle, pGenre, pURL){
+let Game = function (pTitle, pGenre, pRelease, pURL){
     this.Title = pTitle;
     this.Genre = pGenre;
+    this.Release = pRelease;
     this.URL = pURL;
 }
 
-gameArr.push(new Game("The Witcher 3: Wild Hunt", "Action; Open World", "https://www.youtube.com/embed/XHrskkHf958"))
-gameArr.push(new Game("Stray", "Adventure", "https://www.youtube.com/embed/4uP2MyUL49s"))
-gameArr.push(new Game("Red Dead Redemption 2", "Action; Open World", "https://www.youtube.com/embed/HVRzx17WHVk"))
-gameArr.push(new Game("Pokémon Legends: Arceus", "Adventure; Open World", "https://www.youtube.com/embed/I4RynqpahT8"))
-
+gameArr.push(new Game("The Witcher 3: Wild Hunt", "Action; Open World", "5/18/2015", "https://www.youtube.com/embed/XHrskkHf958"))
+gameArr.push(new Game("Stray", "Adventure", "7/19/2022", "https://www.youtube.com/embed/4uP2MyUL49s"))
+gameArr.push(new Game("Red Dead Redemption 2", "Action; Open World", "10/26/2018","https://www.youtube.com/embed/HVRzx17WHVk"))
+gameArr.push(new Game("Pokémon Legends: Arceus", "Adventure; Open World", "1/28/2022", "https://www.youtube.com/embed/I4RynqpahT8"))
+gameArr.push(new Game("Assassin's Creed Mirage", "Action; Rogue-like", "TBA 2023", "https://www.youtube.com/embed/x55lAlFtXmw"))
+gameArr.push(new Game("Diablo 4", "Action; Adventure", "6/6/2023", "https://www.youtube.com/embed/Ro26B394ZBM"))
+gameArr.push(new Game("The Legend of Zelda: Tears of the Kingdom", "Action; Open World", "5/12/2023", "https://www.youtube.com/embed/uHGShqcAHlQ"))
+gameArr.push(new Game("Hollow Knight: Silksong", "Action; Adventure", "TBA 2023","https://www.youtube.com/embed/JSfuFlhsxZY"))
 
 let selectedGenre = "not selected";
 
@@ -25,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gameArr.push(new MovieObject(
         document.getElementById("title").value, 
         document.getElementById("genre").value,
+        document.getElementById("release").value,
         document.getElementById("URL").value,
         gameArr.length,  // set ID
         document.getElementById("URL").value));
@@ -38,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
-// end of add button events ************************************************************************
+// end of add button events ********************************************************************
 
-function createList(){
+function createList(){}
    let myUL = document.getElementById("gameList");
    myUL.innerHTML = "";
 
@@ -51,48 +56,12 @@ function createList(){
         // use the html5 "data-parm" to encode the ID of this particular data object
         // that we are building an li from
         myLi.setAttribute("data-parm", aGame.ID);
-    myLi.innerHTML = "<span style='font-weight: bold;'>Title:</span> " + aGame.Title + "<br><span style='font-weight: bold;'>Genre:</span> " + aGame.Genre + "<br>" + 
+    myLi.innerHTML = "<span style='font-weight: bold;'>Title:</span> " + aGame.Title + "<br><span style='font-weight: bold;'>Genre:</span> " + aGame.Genre + "<br><span style='font-weight: bold;'>Release:</span> " + aGame.Release + "<br>" + 
     "<iframe width=\"560\" height=\"315\" src=\"" + aGame.URL + "\" title= \"YouTube video player\"" +
     "allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"allowfullscreen></iframe><br><br>";
     myUL.appendChild(myLi);
     console.log(myLi);
     });
-
-    /*
-  // wishlist page *************************************************
-  // create an array of wishlist games
-
-  <ul id="gameList2"></ul>
-
-
-    let gameArr2 = [];
-      new Game("Assassin's Creed Mirage", "Action; Rogue-like", "https://www.youtube.com/embed/x55lAlFtXmw"))
-      new Game("Diablo 4", "Action; Adventure", "https://www.youtube.com/embed/Ro26B394ZBM"))
-      new Game("The Legend of Zelda: Tears of the Kingdom", "Action; Open World", "https://www.youtube.com/embed/uHGShqcAHlQ"))
-      new Game("Hollow Knight: Silksong", "Action; Adventure", "https://www.youtube.com/embed/JSfuFlhsxZY"))
-
-    document.addEventListener("DOMContentLoaded", function() {
-      createList();
-
-
-      // add button events...
-    });
-
-    function createList() {
-      let myUL = document.getElementById("gameList2");
-      myUL.innerHTML = "";
-
-      gameArr2.forEach(function(aGame) { 
-        var myLi = document.createElement('li');
-        myLi.classList.add('aGame'); 
-        myLi.setAttribute("data-parm", aGame.ID);
-        myLi.innerHTML = "<span style='font-weight: bold;'>Title:</span> " + aGame.Title + "<br><span style='font-weight: bold;'>Genre:</span> " + aGame.Genre + "<br>" + 
-        "<iframe width=\"560\" height=\"315\" src=\"" + aGame.URL + "\" title= \"YouTube video player\"" +
-        "allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"allowfullscreen></iframe><br><br>";
-        myUL.appendChild(myLi);
-        console.log(myLi);
-      });
-    }*/
 
 
 
