@@ -54,6 +54,45 @@ function createList(){
         myUL.appendChild(myLi);
         console.log(myLi)
     });
+
+    /*
+  // wishlist page *************************************************
+  // create an array of wishlist games
+
+  <ul id="gameList2"></ul>
+
+
+    let gameArr2 = [];
+      new Game("Assassin's Creed Mirage", "Action; Rogue-like", "https://www.youtube.com/embed/x55lAlFtXmw"))
+      new Game("Diablo 4", "Action; Adventure", "https://www.youtube.com/embed/Ro26B394ZBM"))
+      new Game("The Legend of Zelda: Tears of the Kingdom", "Action; Open World", "https://www.youtube.com/embed/uHGShqcAHlQ"))
+      new Game("Hollow Knight: Silksong", "Action; Adventure", "https://www.youtube.com/embed/JSfuFlhsxZY"))
+
+    document.addEventListener("DOMContentLoaded", function() {
+      createList();
+
+
+      // add button events...
+    });
+
+    function createList() {
+      let myUL = document.getElementById("gameList2");
+      myUL.innerHTML = "";
+
+      gameArr2.forEach(function(aGame) { 
+        var myLi = document.createElement('li');
+        myLi.classList.add('aGame'); 
+        myLi.setAttribute("data-parm", aGame.ID);
+        myLi.innerHTML = "<span style='font-weight: bold;'>Title:</span> " + aGame.Title + "<br><span style='font-weight: bold;'>Genre:</span> " + aGame.Genre + "<br>" + 
+        "<iframe width=\"560\" height=\"315\" src=\"" + aGame.URL + "\" title= \"YouTube video player\"" +
+        "allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"allowfullscreen></iframe><br><br>";
+        myUL.appendChild(myLi);
+        console.log(myLi);
+      });
+    }*/
+
+
+
    
     /*var liList = document.getElementsByClassName("aGame");
     let newGameArr = Array.from(liList);
