@@ -40,6 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
     $(document).bind("change", "#select-genre", function (event, ui) {
         selectedGenre = $('#select-genre').val();
     });
+    
+    
+    /*form input for the 'add' page
+
+document.addEventListener("DOMContentLoaded", function (event) {})
+
+function formSubmitEvent() {
+    let title = document.getElementById("title").value;
+    let genre = document.getElementById("genre").value;
+    let release = document.getElementById("release").value;
+    let trailer = document.getElementById("trailer").value;
+ }
+ 
+ */
 
 
 });
