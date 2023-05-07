@@ -7,15 +7,18 @@ let Game = function (pTitle, pGenre, pURL){
     this.URL = pURL;
 }
 
-gameArr.push(new Game("The Witcher 3: Wild Hunt", "Open World", "https://www.youtube.com/embed/XHrskkHf958"))
+gameArr.push(new Game("The Witcher 3: Wild Hunt", "Action; Open World", "https://www.youtube.com/embed/XHrskkHf958"))
 gameArr.push(new Game("Stray", "Adventure", "https://www.youtube.com/embed/4uP2MyUL49s"))
+gameArr.push(new Game("Red Dead Redemption 2", "Action; Open World", "https://www.youtube.com/embed/HVRzx17WHVk"))
+gameArr.push(new Game("Pokémon Legends: Arceus", "Adventure; Open World", "https://www.youtube.com/embed/I4RynqpahT8"))
+
 
 let selectedGenre = "not selected";
 
 document.addEventListener("DOMContentLoaded", function () {
 
     createList();
-
+  
 // add button events ************************************************************************
     
     document.getElementById("buttonAdd").addEventListener("click", function () {
@@ -48,11 +51,11 @@ function createList(){
         // use the html5 "data-parm" to encode the ID of this particular data object
         // that we are building an li from
         myLi.setAttribute("data-parm", aGame.ID);
-        myLi.innerHTML = "Title: " + aGame.Title + "<br>Genre: " + aGame.Genre + "<br>" + 
-        "<iframe width=\"560\" height=\"315\" src=\"" + aGame.URL + "\" title= \"YouTube video player\"" +
-        "allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"allowfullscreen></iframe>";
-        myUL.appendChild(myLi);
-        console.log(myLi)
+    myLi.innerHTML = "<span style='font-weight: bold;'>Title:</span> " + aGame.Title + "<br><span style='font-weight: bold;'>Genre:</span> " + aGame.Genre + "<br>" + 
+    "<iframe width=\"560\" height=\"315\" src=\"" + aGame.URL + "\" title= \"YouTube video player\"" +
+    "allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"allowfullscreen></iframe><br><br>";
+    myUL.appendChild(myLi);
+    console.log(myLi);
     });
 
     /*
