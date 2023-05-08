@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     
-    /*form input for the 'add' page
+    /*added this here but I dont think its correct
 
 document.addEventListener("DOMContentLoaded", function (event) {})
 
@@ -50,7 +50,7 @@ function formSubmitEvent() {
     let title = document.getElementById("title").value;
     let genre = document.getElementById("genre").value;
     let release = document.getElementById("release").value;
-    let trailer = document.getElementById("trailer").value;
+    let url = document.getElementById("url").value;
  }
  
  */
